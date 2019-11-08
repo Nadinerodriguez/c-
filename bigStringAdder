@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+string add(string a, string b)
+{
+    if(a.size() < b.size())
+        swap(a, b);
+
+    int j = a.size()-1;
+
+    
