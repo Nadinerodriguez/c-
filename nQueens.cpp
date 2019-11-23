@@ -31,3 +31,11 @@ int nqueens(int n) {
    delete[] q;
    return solutions;
 }
+int main() {
+    int n;
+    cout << "Enter the number of queens you want: ";
+    cin >> n;
+    for (int i = 1; i <= n; ++i)
+        cout << "There are " << nqueens(i) << " solution(s) to the " << i << " queen(s) problem." << endl;
+    return 0;
+}
