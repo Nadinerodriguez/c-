@@ -25,7 +25,7 @@ int main(){
     
     while(t[1].size() < n+1) {  // while t[1] does not contain all of the rings
         // Moves the ring from the "from tower" to the "to tower"
-        t[to].push_back(t[from].back()); // gets the last element from "from", pushes it to "to" and removes it from "from"
+        t[to].push_back(t[from].back()); // gets the last element from "from" and pushes it to "to" 
         t[from].pop_back(); // removes out the ring from "from"
         cout << "Move number " << ++move << ": Transfer ring " << candidate << " from tower " << char(from+65) << " to tower " << char(to+65) << endl;
         
