@@ -17,7 +17,7 @@ int main(){
     t[1].push_back(n+1);
     t[2].push_back(n+1);
     
-    // The initial value of to depends on whether n is odd or even
+    // The initial value of "to" depends on whether n is odd or even
     if((n%2) == 1)
         to = 1;
     else
@@ -25,21 +25,23 @@ int main(){
     
     while(t[1].size() < n+1) {  // while t[1] does not contain all of the rings
         // Moves the ring from the "from tower" to the "to tower"
-        t[to].push_back(t[from].back()); 
-        t[from].pop_back();
+        t[to].push_back(t[from].back()); // gets the last element from "from", pushes it to "to" and removes it from "from"
+        t[from].pop_back(); // removes out the ring from "from"
         cout << "Move number " << ++move << ": Transfer ring " << candidate << " from tower " << char(from+65) << " to tower " << char(to+65) << endl;
         
         if(n%2 == 1 ) { // Odd number of rings
+            // from = the index of the tower with the smallest ring that has not just been moved
             if(t[(to+1)%3].back() < t[(to+2)%3].back())
                 from = (to+1)%3;
             else
                 from = (to+2)%3;
             
+            // to = the index of the closest tower on which the candidate can be placed
             if(t[(from)].back() < t[(from+1)%3].back())
                 to = (from+1)%3;
             else
                 to = (from+2)%3;
-            // Gets the next candidate
+            // Gets the next candidate. Candidate = the ring on top of the "from" tower
             candidate = (t[from].back());
         }
         else { // Even number of rings
