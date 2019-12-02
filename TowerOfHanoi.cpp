@@ -17,7 +17,7 @@ int main(){
     t[1].push_back(n+1);
     t[2].push_back(n+1);
     
-    // Initializes towers and candidate
+    // The initial value of to depends on whether n is odd or even
     if((n%2) == 1)
         to = 1;
     else
