@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(){
-    vector<int> t[3];
+    
+    vector<int> t[3]; // 3 towers (A,B,C)
 
     int n, candidate = 1, to, from = 0, move = 0;
     cout << "Please enter a number of rings to move: ";
