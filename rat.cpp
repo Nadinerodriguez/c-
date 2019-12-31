@@ -7,6 +7,7 @@ private:
     int d;
 
 public:
+    // Constructors
     Rat() {
         n = 0;
         d = 1;
