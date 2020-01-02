@@ -20,3 +20,8 @@ public:
         n = i;
         d = 1;
     }
+    
+    int getN() { return n; }
+    int getD() { return d; }   
+    void setN(int i) { n = i; }
+    void setD(int i) { d = i; }
