@@ -20,7 +20,7 @@ public:
         n = i;
         d = 1;
     }
-    
+    // Getters & Setters
     int getN() { return n; }
     int getD() { return d; }   
     void setN(int i) { n = i; }
