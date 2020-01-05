@@ -25,3 +25,28 @@ public:
     int getD() { return d; }   
     void setN(int i) { n = i; }
     void setD(int i) { d = i; }
+    
+    Rat operator+(Rat r){
+        Rat t;
+        t.n = n*r.d + d*r.n;
+        t.d = d*r.d;
+        return t;
+    }
+    Rat operator-(Rat r) {
+        Rat t;
+        t.n = n*r.d - d*r.n;
+        t.d = d*r.d;
+        return t;
+    }
+    Rat operator*(Rat r) {
+        Rat t;
+        t.n = n*r.n;
+        t.d = d*r.d;
+        return t;
+    }
+    Rat operator/(Rat r) {
+        Rat t;
+        t.n = n*r.d;
+        t.d = d*r.n;
+        return t;
+    }
