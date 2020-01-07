@@ -25,7 +25,8 @@ public:
     int getD() { return d; }   
     void setN(int i) { n = i; }
     void setD(int i) { d = i; }
-    
+
+    // Operators
     Rat operator+(Rat r){
         Rat t;
         t.n = n*r.d + d*r.n;
