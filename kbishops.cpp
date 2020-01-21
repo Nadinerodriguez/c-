@@ -31,4 +31,18 @@ int kbishops(int n, int k) {
    delete [] q;
    return solutions;
 }
+int main() {
+   int n, k;
+   while (true) {
+      cout << "Enter value of n: ";
+      cin >> n;
+      if (n == -1)
+         break;
+      cout << "Enter value of k: ";
+      cin >> k;
+      cout << "number of solutions: " << kbishops(n, k) << "\n";
+   }
+   return 0;
+}
+
 
